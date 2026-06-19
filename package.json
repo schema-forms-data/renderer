@@ -1,0 +1,78 @@
+{
+  "name": "@schema-forms-data/renderer",
+  "version": "4.0.7",
+  "description": "Form renderer for SchemaForms — renders FormSchema with react-hook-form",
+  "license": "MIT",
+  "author": "SchemaForms",
+  "homepage": "https://schemaforms.github.io/schema-forms-data",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SchemaFormsData/renderer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SchemaFormsData/renderer/issues"
+  },
+  "keywords": [
+    "react",
+    "forms",
+    "schema",
+    "renderer",
+    "react-hook-form",
+    "form-validation",
+    "schema-forms-data"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist .tsbuildinfo",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "dependencies": {
+    "@schema-forms-data/core": "^4.0.7",
+    "@schema-forms-data/templates": "^4.0.7",
+    "@schema-forms-data/ui": "^4.0.7",
+    "file-type": "^21.3.4",
+    "zod": "^4.3.6"
+  },
+  "peerDependencies": {
+    "lucide-react": "^0.400.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-hook-form": "^7.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^4.0.0"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
