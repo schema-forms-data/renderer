@@ -58,7 +58,6 @@ export interface PaymentMethodValue {
 /** Campo reservado aceito pela rota pública de upload de inscrição. */
 const CAMPO_COMPROVANTE = "comprovante";
 const COMPROVANTE_MAX_BYTES = 10 * 1024 * 1024; // 10MB
-const COMPROVANTE_FILE_TYPES = ["image/*", ".pdf", "application/pdf"];
 
 /**
  * Métodos que exigem comprovante quando o evento configura `exigeComprovante`.

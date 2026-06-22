@@ -136,7 +136,6 @@ const IconsVariant = ({
 const IconsLabeledVariant = ({
   steps,
   currentStep,
-  position,
   orientation = "horizontal",
   onStepClick,
 }: {
