@@ -56,9 +56,9 @@
     "prepublishOnly": "pnpm run clean && pnpm run build"
   },
   "dependencies": {
-    "@schema-forms-data/core": "4.0.11",
-    "@schema-forms-data/templates": "4.0.12",
-    "@schema-forms-data/ui": "4.0.11",
+    "@schema-forms-data/core": "4.0.12",
+    "@schema-forms-data/templates": "4.0.13",
+    "@schema-forms-data/ui": "4.0.12",
     "file-type": "22.0.1",
     "zod": "4.4.3"
   },

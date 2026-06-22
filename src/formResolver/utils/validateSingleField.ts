@@ -70,7 +70,8 @@ export const validateSingleField = (
         const val = rawValue as { tipo?: string; data?: string | null; genero?: string | null } | null | undefined;
         if (!val?.tipo) return 'Selecione o tipo de participação';
         if (val.tipo === 'por_dia' && !val.data) return 'Selecione um dia para participar';
-        if ('genero' in (val ?? {}) && !val?.genero) return 'Selecione o sexo';
+        const controlaGenero = !!(externalData['evento.controlaGenero'] ?? externalData['controlaGenero']);
+        if (controlaGenero && !val?.genero) return 'Selecione o sexo';
         return undefined;
     }
 
