@@ -49,6 +49,12 @@ jobs:
         if: steps.version_check.outputs.skip == 'false'
         run: pnpm build
 
-      - name: Publish to npm (OIDC — sem NPM_TOKEN armazenado)
+      - name: Test
+        if: steps.version_check.outputs.skip == 'false'
+        run: pnpm test:coverage
+
+      - name: Publish to npm
         if: steps.version_check.outputs.skip == 'false'
         run: pnpm publish --no-git-checks --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
