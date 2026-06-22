@@ -4,13 +4,13 @@
   "description": "Form renderer for SchemaForms — renders FormSchema with react-hook-form",
   "license": "MIT",
   "author": "SchemaForms",
-  "homepage": "https://schemaforms.github.io/schema-forms-data",
+  "homepage": "https://schema-forms-data.github.io/schema-forms-data",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SchemaFormsData/renderer.git"
+    "url": "https://github.com/schema-forms-data/renderer.git"
   },
   "bugs": {
-    "url": "https://github.com/SchemaFormsData/renderer/issues"
+    "url": "https://github.com/schema-forms-data/renderer/issues"
   },
   "keywords": [
     "react",

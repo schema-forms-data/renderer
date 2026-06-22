@@ -50,32 +50,8 @@ import '@schema-forms-data/ui/style.css';
 />
 ```
 
----
 
-## Build
 
-```bash
-pnpm install
-pnpm build      # tsc -> dist/
-```
-
-## Publicar
-
-Automático: a cada **push na `main`**, o workflow (`.github/workflows/publish.yml`)
-publica **somente se a versão do `package.json` ainda não existir no npm**. Push de
-README/refactor não republica nada — pra lançar, basta dar bump na versão:
-
-```bash
-npm version patch        # 4.0.7 -> 4.0.8 (faz commit + tag)
-git push --follow-tags   # push na main dispara o publish da nova versão
-```
-
-Usa **npm Trusted Publishing (OIDC)** — sem `NPM_TOKEN` armazenado — e anexa
-**provenance** automaticamente.
-
-> Primeira publicação: o Trusted Publisher do npm precisa do pacote já existindo.
-> Faça a versão inicial uma vez manualmente (`npm publish`), depois configure o Trusted
-> Publisher no npmjs.com e deixe o restante por conta do workflow.
 
 ## Licença
 
